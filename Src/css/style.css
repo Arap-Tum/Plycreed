@@ -531,7 +531,7 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 50px; /* Adjust based on actual header height */
+    padding-top: 100px; /* Adjust based on actual header height */
   }
 
   .hero .container {
