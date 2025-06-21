@@ -530,6 +530,13 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 50px; /* Adjust based on actual header height */
+  }
+
+  .hero .container {
+    margin-top: 0; /* Cancel any conflicting margin-top if added before */
+  }
   .logo img {
     height: 60px;
   }
@@ -539,6 +546,10 @@ footer {
 
   .mobile-menu-btn {
     display: block;
+  }
+
+  .hero .container {
+    margin-top: 40px;
   }
 
   .hero h1 {
