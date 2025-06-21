@@ -22,9 +22,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-
   /* background: rgba(255, 255, 255, 0.95); */
-
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
@@ -38,17 +36,17 @@ nav {
 }
 
 .logo {
-  margin: 10px;
+  margin: 5px;
   border-radius: 50%;
   padding: 5px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
 }
 
 .logo img {
   height: 80px;
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,13 +60,18 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #667eea;
+}
+
+.mobile-menu-btn {
+  color: #eee;
+  font-size: 1.5rem;
 }
 
 .cta-btn {
@@ -527,6 +530,9 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .logo img {
+    height: 60px;
+  }
   .nav-links {
     display: none;
   }

@@ -33,16 +33,16 @@ document.querySelectorAll("section").forEach((section) => {
 });
 
 // Header scroll effect
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 100) {
-    header.style.background = "rgba(255, 255, 255, 0.98)";
-    header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
-  } else {
-    header.style.background = "rgba(255, 255, 255, 0.95)";
-    header.style.boxShadow = "none";
-  }
-});
+// window.addEventListener("scroll", () => {
+//   const header = document.querySelector("header");
+//   if (window.scrollY > 100) {
+//     header.style.background = "rgba(255, 255, 255, 0.98)";
+//     header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+//   } else {
+//     header.style.background = "rgba(255, 255, 255, 0.95)";
+//     header.style.boxShadow = "none";
+//   }
+// });
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -57,3 +57,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+function backgroundChange() {
+  const header = document.getElementById("header");
+  const heroSection = document.querySelector(".hero");
+
+  if (!header || !heroSection) return;
+  const heroHeight = heroSection.offsetHeight;
+  console.log(header);
+  console.log(heroHeight);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > heroHeight) {
+      header.style.background =
+        "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+    } else {
+      header.style.background = "";
+    }
+  });
+}
+backgroundChange();
